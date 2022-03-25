@@ -1,0 +1,23 @@
+name: codescan-bigid
+description: "a github action to scan your code in bidid or smallid"
+inputs:
+  domain:
+    description: "smallid or bigid domain where the API is exposed. example 'tenant.bigid.cloud'"
+    required: true
+  github_personnal_access_token:
+    description: "A github personnal access token with read capabilities"
+    required: true
+  bigid_token:
+    description: "smallid or bigid access token"
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: scan code
+      shell: bash
+      run: $GITHUB_ACTION_PATH/script.sh
+      env:
+        DOMAIN: ${{ inputs.domain }}
+        PA_TOKEN: ${{ inputs.github_personnal_access_token}}
+        TOKEN: ${{ inputs.bigid_token }}
+        BRANCH: ${{ github.ref_name }}
