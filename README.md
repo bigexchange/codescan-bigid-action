@@ -1,6 +1,6 @@
 # About
 A github action that will scan your repository via SmallID or BigID. It will create a new github datasource per repository and start a scan on each run.
-After each scan, you'll be able to see the results in the catalog. Currently, it does not fail your action is there are findings.
+After each scan, you'll be able to see the results in the catalog. Currently, it does not fail your action if there are findings.
 
 # How to use
 ## Workflow example
