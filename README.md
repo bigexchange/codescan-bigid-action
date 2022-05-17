@@ -4,7 +4,7 @@ After each scan, you'll be able to see the results in the catalog. Currently, it
 
 # How to use
 ## Workflow example
-You need to declare the following snippet in `.github/actions/codescan.yml` (or any other filename in that directory)
+You need to declare the following snippet in `.github/workflows/codescan.yml` (or any other filename in that directory)
 ```yaml
 name: smallid 
 on: [push]
