@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euxo pipefail
 
 SESSION_TOKEN=$(\
    curl -s "https://$DOMAIN/api/v1/refresh-access-token" \
